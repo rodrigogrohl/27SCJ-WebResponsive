@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Cadastro de Cursos - Login</title>
+    <title>Cadastro de Cursos - Lista</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
@@ -12,11 +12,26 @@
         <p>Bem-vindo,
             <%- usuario.nome %>
         </p>
-        <h1>Lista de Eventos</h1>
-        <h4>Selecione uma opção na lista para executá-la</h4>
+        <h1>Lista de Cursos</h1>
+        <h4>Ordenado por data de cadastro</h4>
     </header>
     <section>
-        <!--será implementado em breve-->
+        <table >
+            <tr>
+                <th>Codigo</th>
+                <th>Descricao</th>
+                <th>CH</th>
+                <th>Categoria</th>
+            </tr>
+            <% for(var i=0; i<cursos.length; i++) {%>
+                <tr>
+                    <td><%= cursos[i].codigo %></td>
+                    <td><%= cursos[i].descricao %></td>
+                    <td><%= cursos[i].ch %></td>
+                    <td><%= cursos[i].categoria %></td>
+                </tr>
+            <% } %>
+        </table>
     </section>
     <footer>
         <small>Sistema de Cadastro de Cursos</small>

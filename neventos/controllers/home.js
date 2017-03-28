@@ -10,6 +10,7 @@ module.exports = function (app) {
             if (nome == 'admin' && senha == 'admin') {
                 var usuario = request.body.usuario;
                 request.session.usuario = usuario;
+                request.session.cursos = [];
                 response.redirect('/menu');
             }
             else {
