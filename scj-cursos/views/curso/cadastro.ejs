@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro Curso</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <header>
+        <p>Bem-vindo,
+            <%- usuario.nome %>
+        </p>
+        <h1>Cadastro de Curso</h1>
+        <h4>Forneça os dados para o cadastro</h4>
+    </header>
+    <section>
+        <form action="/curso/add" method="post">
+            Código: <br /><input type="text" name="curso[codigo]" placeholder="Código do Curso"> <br>
+            Descrição: <br /><input type="text" name="curso[descricao]" placeholder="Descrição do Curso"> <br>
+            CH: <br /><input type="text" name="curso[ch]"> <br>
+            <select name="curso[categoria]">
+                <option name="tech" value="Tecnologia">Tecnologia</option>
+                <option name="adm" value="Administracao">Administração</option>
+                <option name="bio" value="Biologicas">Biológicas</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <small>Sistema de Cadastro de Cursos</small>
+    </footer>
+</body>
+
+</html>
